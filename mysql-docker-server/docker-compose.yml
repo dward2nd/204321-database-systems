@@ -26,13 +26,18 @@ services:
       PMA_PASSWORD: secret
 
   jupyter:
-    image: jupyter/base-notebook:latest
+    image: jupyter-sql
+    build: ./jupyter-sql
     container_name: jupyter
     ports:
       - 8888:8888
     environment:
       JUPYTER_ENABLE_LAB: "yes"
       JUPYTER_TOKEN: "docker"
+    volumes:
+      - ./ipynb:/home/jovyan/work
 
 volumes:
   data-volume:
+  sql:
+  jupyter-ipynb:
