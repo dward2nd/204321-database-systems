@@ -1,3 +1,4 @@
 **/.DS_Store
-data-volume/
-**/.ipynb_checkpoints
+mysql-docker-server/data-volume/
+mysql-docker-server/ipynb/.ipynb_checkpoints/
+mysql-docker-server/ipynb/exercise-filled.ipynb
