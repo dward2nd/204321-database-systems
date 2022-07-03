@@ -1,7 +1,9 @@
 # How to MySQL docker server?
 
 1. Download and install [Docker](https://docs.docker.com/get-started/).
-2. Run `docker compose up -d`
+2. Make sure to switch to directory `mysql-docker-server`. The root directory 
+of this repository may be occupied for other purposes in the future.
+3. Run `docker compose up -d`
 
 Yeah, that's all. Simple, isn't it?
 
