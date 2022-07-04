@@ -31,3 +31,12 @@ pane, you'll see the only directory. Yes, that's where it's located.
 5. **How can I connect to MySQL using Jupyter Lab?**<br>Read the practice 
 notebook.
 
+6. **How can I reset the database to the default state?**<br>There may be a
+moment that you will modify the database (i.e. using `DELETE`, `INSERT`, `UPDATE`).
+Just run:
+
+```shell
+cd mysql-docker-server
+rm -r data-volume
+```
+
