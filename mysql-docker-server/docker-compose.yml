@@ -9,7 +9,7 @@ services:
       MYSQL_HOST: localhost
       MYSQL_ROOT_PASSWORD: secret
     volumes:
-      - ./sql:/docker-entrypoint-initdb.d
+      - ./default-sql-db:/docker-entrypoint-initdb.d
       - ./data-volume:/var/lib/mysql
 
   phpmyadmin:
@@ -25,17 +25,17 @@ services:
       PMA_USER: root
       PMA_PASSWORD: secret
 
-  jupyter:
+  jupyter-sql:
     image: jupyter-sql
     build: ./jupyter-sql
-    container_name: jupyter
     ports:
       - 8888:8888
+    expose:
+      - "8888"
     environment:
       JUPYTER_ENABLE_LAB: "yes"
-      JUPYTER_TOKEN: "docker"
     volumes:
-      - ./ipynb:/home/jovyan/work
+      - ./sql-notebooks:/var/notebooks
 
 volumes:
   data-volume:
