@@ -54,6 +54,8 @@ provides the answers for all the 26 problems.
 In case you want to get your modified file, it is located in 
 `mysql-docker-server/sql-notebooks`.
 
+***Don't forget to save the file before exit Jupyter Lab.***
+
 ![Screenshot for Jupyter Lab](readme-files/jupyterlab-screenshot.png)
 
 ### 
