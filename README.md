@@ -1,40 +1,70 @@
-# How to MySQL docker server?
+# What is this repository about?
+
+This is a Git repository used for materials related to my CSCMU course: 204321, 
+Database Systems. In the beginning, this was supposed to be used on my own. 
+Then I found it to be useful for all of my colleagues, so I decided to open 
+this repository to the public. Feel free to send me pull requests if I made 
+some mistakes.
+
+# Contents
+
+- [MySQL Docker Server](#heading-mysql-docker-server)
+- [FAQs](#faq)
+
+<a name="#heading-mysql-docker-server"></a>
+## MySQL Docker Server
+
+This is a Docker compose application that let you run MySQL, Phpmyadmin, and 
+Jupyter Lab, with no or few configurations.
+
+For Jupyter Lab, this is a complement tool to do the practices more easily.
+
+### Setup
 
 1. Download and install [Docker](https://docs.docker.com/get-started/).
 2. Make sure to switch to directory `mysql-docker-server`. The root directory 
 of this repository may be occupied for other purposes in the future.
-3. Run `docker compose up -d`
+3. Run `docker compose up -d` to start the server.
 
-Yeah, that's all. Simple, isn't it?
+That's all. Simple, isn't it?
 
-If there were installation problems occured, contact me. I'm too lazy to 
-write a documentation about that. Or maybe, you should search on Google first.
+At first, it takes some time to install related dependencies, but it will take 
+much slower later.
 
+**To shutdown the server,** run `docker compose down` in the same directory as 
+before.
+
+### How to use?
+
+#### Phpmyadmin 
+
+Start the server and browse `http://localhost:8080` on a web browser.
+
+You will notices that the database `CompanyElmasri` has been already imported.
+
+#### Jupyter Lab (Doing the practice)
+
+Start the server and browse `http://localhost:8888` on a web browser. 
+
+On the left pane, there will be the only file named `exercise.ipynb`. This file 
+provides the answers for all the 26 problems.
+
+In case you want to get your modified file, it is located in 
+`mysql-docker-server/sql-notebooks`.
+
+### 
+
+<a name="#faq"></a>
 ## Probable FAQs
 
 Nobody has asked me yet, so I guess my own set of Q&A's.
 
-1. **How to open Phpmyadmin?**<br>Browse `http://localhost:8080` and there you
-go.
-
-2. **Do I have to import the `company_elmasri.sql` file?**<br>No. We did it 
-already in the `docker-compose.yml` file. You may need to take a look to learn 
-about it.
-
-3. **How to open Jupyter Lab?**<br>Browse `http://localhost:8888/?token=docker`.
-Note that `?token=docker` is important here. Or you can input `docker` if you 
-miss that part in the URL.
-
-4. **Where does the practice notebook located?**<br>In Jupyter Lab, on the left 
-pane, you'll see the only directory. Yes, that's where it's located.
-
-5. **How can I connect to MySQL using Jupyter Lab?**<br>Read the practice 
+1. **How can I connect to MySQL using Jupyter Lab?**<br>Read the practice 
 notebook.
 
-6. **How can I reset the database to the default state?**<br>There may be a
+2. **How can I reset the database to the default state?**<br>There may be a
 moment that you will modify the database (i.e. using `DELETE`, `INSERT`, `UPDATE`).
 Just run:
-
 ```shell
 cd mysql-docker-server
 rm -r data-volume
