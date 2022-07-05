@@ -9,7 +9,7 @@ services:
       MYSQL_HOST: localhost
       MYSQL_ROOT_PASSWORD: secret
     volumes:
-      - ./default-sql-db:/docker-entrypoint-initdb.d
+      - ./default-sql-db:/docker-entrypoint-initdb.d:ro
       - ./data-volume:/var/lib/mysql
 
   phpmyadmin:
@@ -32,8 +32,6 @@ services:
       - 8888:8888
     expose:
       - "8888"
-    environment:
-      JUPYTER_ENABLE_LAB: "yes"
     volumes:
       - ./sql-notebooks:/var/notebooks
 

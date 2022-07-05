@@ -6,5 +6,6 @@ RUN conda install --quiet --yes pymysql && \
 
 USER 1001
 WORKDIR /var/notebooks/
-CMD jupyter lab --ip 0.0.0.0 --port 8888 --no-browser --ServerApp.token=""
+ENTRYPOINT jupyter lab --ip 0.0.0.0 --port 8888 --no-browser \
+               --ServerApp.token=""
 
