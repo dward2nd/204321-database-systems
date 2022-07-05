@@ -42,6 +42,8 @@ Start the server and browse `http://localhost:8080` on a web browser.
 
 You will notices that the database `CompanyElmasri` has been already imported.
 
+![Screenshot for Phpmyadmin](readme-files/phpmyadmin-screenshot.png)
+
 #### Jupyter Lab (Doing the practice)
 
 Start the server and browse `http://localhost:8888` on a web browser. 
@@ -51,6 +53,8 @@ provides the answers for all the 26 problems.
 
 In case you want to get your modified file, it is located in 
 `mysql-docker-server/sql-notebooks`.
+
+![Screenshot for Jupyter Lab](readme-files/jupyterlab-screenshot.png)
 
 ### 
 
