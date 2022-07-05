@@ -40,7 +40,7 @@ before.
 
 Start the server and browse `http://localhost:8080` on a web browser.
 
-You will notices that the database `CompanyElmasri` has been already imported.
+You will notice that the database `CompanyElmasri` has been already imported.
 
 ![Screenshot for Phpmyadmin](readme-files/phpmyadmin-screenshot.png)
 
