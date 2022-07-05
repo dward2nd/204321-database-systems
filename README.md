@@ -8,10 +8,10 @@ some mistakes.
 
 # Contents
 
-- [MySQL Docker Server](#heading-mysql-docker-server)
-- [FAQs](#faq)
+- [MySQL Docker Server](#user-content-heading-mysql-docker-server)
+- [FAQs](#user-content-faq)
 
-<a name="#heading-mysql-docker-server"></a>
+<a name="heading-mysql-docker-server"></a>
 ## MySQL Docker Server
 
 This is a Docker compose application that let you run MySQL, Phpmyadmin, and 
@@ -54,7 +54,7 @@ In case you want to get your modified file, it is located in
 
 ### 
 
-<a name="#faq"></a>
+<a name="faq"></a>
 ## Probable FAQs
 
 Nobody has asked me yet, so I guess my own set of Q&A's.
