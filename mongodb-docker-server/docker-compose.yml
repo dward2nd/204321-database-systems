@@ -28,6 +28,16 @@ services:
       ME_CONFIG_MONGODB_ADMINPASSWORD: 7B2NBV5kcvr61OIB
       ME_CONFIG_MONGODB_URL: mongodb://root:7B2NBV5kcvr61OIB@mongo:27017/
 
+  jupyter-sql:
+    image: jupyter
+    build: ./jupyter
+    ports:
+      - 8888:8888
+    networks:
+      - cscmu-mongodb
+    volumes:
+      - ./exercise_notebooks:/var/notebooks
+
 volumes:
   data-volume: 
 
